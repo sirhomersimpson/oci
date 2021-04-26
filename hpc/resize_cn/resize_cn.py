@@ -34,9 +34,9 @@ def update_cn_size(cn_ocid, size):
 
     while lifecycle_state == "SCALING":
         lifecycle_state = compute_management_client.get_instance_pool(pool_id).data.lifecycle_state
-        print('.', end='')
+        print('.....', end=' ')
         time.sleep(3)
-    print('\ncluster network is running now with size {size}')
+    print(f'\ncluster network is running now with size {size}')
 
 
 def get_instances_in_cn(cn_ocid):
