@@ -4,6 +4,8 @@
 # This bash sets up the IP for the Cluster Network
 # RDMA NICS for  GPU48 shapes
 # https://blogs.oracle.com/cloud-infrastructure/nvidia-a100-bare-metal-performance-in-oracle-cloud-infrastructure
+# It generates network interfaces for the 8x2 Mellanox NICs that are connected to the GPU
+# You need to copy the files as sudo to /etc/network/interfaces/intefaces.d and ifup then
 #####################################################
 ######## configures ips for Cluster network
 # Step 1 define NETMASK - use ipcalc to see range
@@ -30,16 +32,25 @@
 
 netmask=255.255.255.248
 unset map_of_ips
-declare -A map_of_ips=( ["enp72s0f0"]="192.168.1.1" ["enp72s0f1"]="192.168.1.9"\ ["enp76s0f0"]="192.168.1.17" ["enp76s0f1"]="192.168.1.25"\
-["enp45s0f1"]="192.168.1.30"\
-["enp12s0f0"]="192.168.1.33" ["enp12s0f1"]="192.168.1.41"\
-["enp22s0f0"]="192.168.1.49" ["enp22s0f1"]="192.168.1.57"\
-["enp195s0f0"]="192.168.1.65" ["enp195s0f1"]="192.168.1.73"\
-["enp209s0f0"]="192.168.1.81" ["enp209s0f1"]="192.168.1.89"\
-["enp138s0f0"]="192.168.1.97" ["enp138s0f1"]="192.168.1.105"\
-["enp148s0f0"]="192.168.1.113" ["enp148s0f1"]="192.168.1.121"\
-
-) 
+declare -A map_of_ips
+map_of_ips["enp72s0f0"]="192.168.1.1" 
+map_of_ips["enp72s0f1"]="192.168.1.9"
+map_of_ips["enp76s0f0"]="192.168.1.17" 
+map_of_ips["enp76s0f1"]="192.168.1.25"
+# NA map_of_ips["enp45s0f1"]="192.168.1.30"
+map_of_ips["enp12s0f0"]="192.168.1.33" 
+map_of_ips["enp12s0f1"]="192.168.1.41"
+map_of_ips["enp22s0f0"]="192.168.1.49" 
+map_of_ips["enp22s0f1"]="192.168.1.57"
+map_of_ips["enp195s0f0"]="192.168.1.65" 
+map_of_ips["enp195s0f1"]="192.168.1.73"
+map_of_ips["enp209s0f0"]="192.168.1.81" 
+map_of_ips["enp209s0f1"]="192.168.1.89"
+map_of_ips["enp138s0f0"]="192.168.1.97" 
+map_of_ips["enp138s0f1"]="192.168.1.105"
+map_of_ips["enp148s0f0"]="192.168.1.113" 
+map_of_ips["enp148s0f1"]="192.168.1.121"
+ 
 CX5=(enp72s0f0 enp72s0f1 enp76s0f0 enp76s0f1 enp12s0f0 enp12s0f1 enp22s0f0 enp22s0f1 enp195s0f0 enp195s0f1 enp209s0f0 enp209s0f1 enp138s0f0 enp138s0f1 enp148s0f0 enp148s0f1)
 
 for interfaces in ${CX5[@]}; do
