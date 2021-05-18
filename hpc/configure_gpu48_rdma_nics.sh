@@ -34,10 +34,10 @@ netmask=255.255.255.248
 unset map_of_ips
 declare -A map_of_ips
 
-#Host A
-# map_of_ips["enp72s0f0"]="192.168.1.1" 
+<< 'COMMENTED-HOSTS'
+Host A
+map_of_ips["enp72s0f0"]="192.168.1.1" 
 map_of_ips["enp72s0f1"]="192.168.1.9"
-'
 map_of_ips["enp76s0f0"]="192.168.1.17" 
 map_of_ips["enp76s0f1"]="192.168.1.25"
 # NA map_of_ips["enp45s0f1"]="192.168.1.30"
@@ -53,7 +53,6 @@ map_of_ips["enp138s0f0"]="192.168.1.97"
 map_of_ips["enp138s0f1"]="192.168.1.105"
 map_of_ips["enp148s0f0"]="192.168.1.113" 
 map_of_ips["enp148s0f1"]="192.168.1.121"
-'
 
 #Host B 
 map_of_ips["enp72s0f0"]="192.168.1.2" 
@@ -73,13 +72,32 @@ map_of_ips["enp138s0f0"]="192.168.1.98"
 map_of_ips["enp138s0f1"]="192.168.1.106"
 map_of_ips["enp148s0f0"]="192.168.1.114" 
 map_of_ips["enp148s0f1"]="192.168.1.122"
+COMMENTED-HOSTS
+
+#Host C 
+map_of_ips["enp72s0f0"]="192.168.1.3" 
+map_of_ips["enp72s0f1"]="192.168.1.11"
+map_of_ips["enp76s0f0"]="192.168.1.19" 
+map_of_ips["enp76s0f1"]="192.168.1.27"
+# NA map_of_ips["enp45s0f1"]="192.168.1.30"
+map_of_ips["enp12s0f0"]="192.168.1.35" 
+map_of_ips["enp12s0f1"]="192.168.1.43"
+map_of_ips["enp22s0f0"]="192.168.1.51" 
+map_of_ips["enp22s0f1"]="192.168.1.59"
+map_of_ips["enp195s0f0"]="192.168.1.67" 
+map_of_ips["enp195s0f1"]="192.168.1.75"
+map_of_ips["enp209s0f0"]="192.168.1.83" 
+map_of_ips["enp209s0f1"]="192.168.1.91"
+map_of_ips["enp138s0f0"]="192.168.1.99" 
+map_of_ips["enp138s0f1"]="192.168.1.107"
+map_of_ips["enp148s0f0"]="192.168.1.115" 
+map_of_ips["enp148s0f1"]="192.168.1.123"
 CX5=(enp72s0f0 enp72s0f1 enp76s0f0 enp76s0f1 enp12s0f0 enp12s0f1 enp22s0f0 enp22s0f1 enp195s0f0 enp195s0f1 enp209s0f0 enp209s0f1 enp138s0f0 enp138s0f1 enp148s0f0 enp148s0f1)
 
+echo Interfaces list -> ${CX5[@]}
 for interfaces in ${CX5[@]}; do
-        echo "here"
-        echo intefaces $interfaces
         #ifup $i
-        echo ${map_of_ips[$interfaces]}
+        echo Creating interface file for:$interfaces, IP:${map_of_ips[$interfaces]}
         cat <<EOF > ifcfg-${interfaces}
 iface ${interfaces} inet static
 address ${map_of_ips[$interfaces]}
