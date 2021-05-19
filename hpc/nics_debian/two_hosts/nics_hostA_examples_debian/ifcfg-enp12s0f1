@@ -1,0 +1,3 @@
+iface enp12s0f1 inet static
+address 192.168.1.41
+netmask 255.255.255.248

@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.4.7.2 (Linux)"/>
+	<meta name="created" content="2021-05-19T10:53:09.947620069"/>
+	<meta name="changed" content="2021-05-19T10:57:46.704901239"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		td p { background: transparent }
+		th p { font-weight: bold; text-align: center; background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+		a:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="margin-top: 0.1in; margin-bottom: 0in; border: none; padding: 0in; orphans: 2; widows: 2">
+<a href="https://www.debian.org/doc/manuals/debian-reference/ch05.en.html"><span style="font-variant: normal"><font color="#0052cc"><span style="text-decoration: none"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"><font size="2" style="font-size: 9pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">https://www.debian.org/doc/manuals/debian-reference/ch05.en.html</span></span></span></font></font></span></font></span></a></p>
+<p style="margin-top: 0.1in; margin-bottom: 0in; border: none; padding: 0in; orphans: 2; widows: 2">
+<a href="https://aarvik.dk/how-to-configure-static-ip-on-centos-and-debian-a-bit-of-network-utils/index.html"><span style="font-variant: normal"><font color="#0052cc"><span style="text-decoration: none"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"><font size="2" style="font-size: 9pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">https://aarvik.dk/how-to-configure-static-ip-on-centos-and-debian-a-bit-of-network-utils/index.html</span></span></span></font></font></span></font></span></a></p>
+<p style="margin-top: 0.1in; margin-bottom: 0in; border: none; padding: 0in; orphans: 2; widows: 2">
+<a href="http://manpages.org/etc-network-interfaces/5"><span style="font-variant: normal"><font color="#0052cc"><span style="text-decoration: none"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"><font size="2" style="font-size: 9pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">http://manpages.org/etc-network-interfaces/5</span></span></span></font></font></span></font></span></a></p>
+<table cellpadding="2" cellspacing="2">
+	<col width="0"/>
+
+	<col width="0"/>
+
+	<col width="0"/>
+
+	<col width="0"/>
+
+	<thead>
+		<tr>
+			<th bgcolor="#f4f5f7" style="background: #f4f5f7" style="border: 1px solid #c1c7d0; padding-top: 0.07in; padding-bottom: 0.07in; padding-left: 0.1in; padding-right: 0.16in"><p align="left">
+				<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 9pt"><b><font color="#172b4d">adapter
+				port</span></b></font></font></p>
+			</th>
+			<th bgcolor="#f4f5f7" style="background: #f4f5f7" style="border: 1px solid #c1c7d0; padding-top: 0.07in; padding-bottom: 0.07in; padding-left: 0.1in; padding-right: 0.16in"><p align="left">
+				<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 9pt"><b><font color="#172b4d">net
+				device</span></b></font></font></p>
+			</th>
+			<th bgcolor="#f4f5f7" style="background: #f4f5f7" style="border: 1px solid #c1c7d0; padding-top: 0.07in; padding-bottom: 0.07in; padding-left: 0.1in; padding-right: 0.16in"><p align="left">
+				<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 9pt"><b><font color="#172b4d">A&nbsp;</span></b></font></font></p>
+			</th>
+			<th bgcolor="#f4f5f7" style="background: #f4f5f7" style="border: 1px solid #c1c7d0; padding-top: 0.07in; padding-bottom: 0.07in; padding-left: 0.1in; padding-right: 0.16in"><p align="left">
+				<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 9pt"><b><font color="#172b4d">B</span></b></font></font></p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp72s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.1/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.2/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp72s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.9/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.10/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_2</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp76s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.17/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.18/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_3</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp76s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.25/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.26/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">mlnx5_4</font></strike></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">enp45s0f0</font></strike></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p><br/>
+
+				</p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p><br/>
+
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">mlnx5_5</font></strike></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">enp45s0f1</font></strike></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">192.168.1.30/29</font></strike></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<strike><font size="2" style="font-size: 9pt">192.168.1.31/29</font></strike></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_6</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp12s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.33/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.34/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_7</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp12s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.41/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.42/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_8</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp22s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.49/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.50/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_9</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp22s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.57/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.58/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_10</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp195s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.65/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.66/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_11</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp195s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.73/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.74/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_12</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp209s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.81/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.82/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_13</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp209s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.89/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.90/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_14</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp138s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.97/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.98/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_15</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp138s0f1</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.105/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.106/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_16</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">enp148s0f0</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.113/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.114/29</font></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">mlnx5_17</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font color="#172b4d"><font size="2" style="font-size: 9pt">enp148s0f1</font></font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.121/29</font></p>
+			</td>
+			<td style="border: 1px solid #c1c7d0; padding: 0.07in 0.1in"><p align="left">
+				<font size="2" style="font-size: 9pt">192.168.1.122/29</font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="margin-top: 0.1in; margin-bottom: 0in; border: none; padding: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#172b4d"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"><font size="2" style="font-size: 9pt">*mlx5_4
+port 1, enp45s0f0np0 is the VCN NIC. mlx5_5&nbsp;enp45s0f0np0 is not
+used</font></font></font></p>
+<p style="margin-top: 0.1in; margin-bottom: 0in; border: none; padding: 0in; orphans: 2; widows: 2">
+<br/>
+
+</p>
+</body>
+</html>
