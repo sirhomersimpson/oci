@@ -1,0 +1,3 @@
+iface enp72s0f1 inet static
+address 172.16.0.21
+netmask 255.255.255.252

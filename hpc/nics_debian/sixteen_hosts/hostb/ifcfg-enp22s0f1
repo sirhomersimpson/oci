@@ -1,0 +1,3 @@
+iface enp22s0f1 inet static
+address 172.16.0.141
+netmask 255.255.255.252
