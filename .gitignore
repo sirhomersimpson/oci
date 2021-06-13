@@ -1,3 +1,11 @@
 .DS_Store
 tf/.DS_Store
 .terraform/
+.idea/
+venv/
+venv3/
+venv/
+__pycache__/
+resize_cn.egg-info/
+vscode_python_test.egg-info/
+
