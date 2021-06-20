@@ -33,3 +33,5 @@ oci compute instance list-vnics --compartment-id ocid1.compartment.oc1..aaaaaaaa
 
 vnic=`oci compute instance list-vnics --compartment-id ocid1.compartment.oc1..aaaaaaaadmtdep3rn7qwjgwjektj4cz7t4x5d5ejhvru6xvsqiqio5vfn6ha --instance-id ocid1.instance.oc1.phx.anyhqljt6if7otacsotd3ub6sadva7lywaov7dflf2ly5ztnf65knzgcwklq |jq '.data[] | select(."is-primary" == false)' | jq -r '.id'
 ```
+# get display name
+ oci compute instance list -c $C | jq '.data[0]."display-name"'
