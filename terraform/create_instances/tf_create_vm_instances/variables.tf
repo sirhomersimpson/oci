@@ -10,10 +10,6 @@ variable "fingerprint" {
     default = "d5:a6:ec:b5:43:f6:ef:5b:25:af:c1:c4:e9:b3:e1:49"
 }
 
-variable "private_key_path" {
-    default = "/home/rkisnah/.oci/hpc.pem"
-}
-
 variable "region" {
     default = "us-ashburn-1"
 }
@@ -26,23 +22,8 @@ variable "ssh_public_key" {
     default="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCZlL2MR02JWdTPM06ZWebmJI4h30/D8syQDmoTRFiDpU1DzqJTUM/cWPz+DSZM/8CtJtrlVuUvM4iiDw2a9wwjjg4JESFTMe5s2x9Ece+KEfgDo/24NF94WGMzXurtCuMj8+z56c23KyDHyeArXu+K2WnxIpCtB9lZOk5jSImza2dXyO7iiHNAdbnbzTDp+Zbb5105jTMjicmITnAhwCpt9ywj7fDiuF2i0eTGMNeBRja9yXHESfh2+UEus9UsojQjxEclueLGzY24sYFgG5WiXGKmZJ7WmD0jAjQawlSwRdk+jo/IJJnvpMulL2sJaae9ZcXfFamFcsnTH0EmoWFfvSO3m3Wea1PMR+T/fripGduLAUO9ytP8uIPxdF0q/9ug9tizChIKFPMXkhTF2FyfciqfO0AWKWD9gYUywaIy/NSWujGIzMGpfVOWaAj9msvaLdAejMN9levZFhaQMZuw+KhCbpast1vpOTgN7UKpC+twWWCysR6koxhdC2rQdh8= rkisnah@rkisnah-mac"
 }
 
-variable "ssh_private_key" {
-    default="c_rik"
-}
-
 # Defines the number of instances to deploy
 variable "num_instances" {
-  default = "1"
-}
-
-# Defines the number of volumes to create and attach to each instance
-# NOTE: Changing this value after applying it could result in re-attaching existing volumes to different instances.
-# This is a result of using 'count' variables to specify the volume and instance IDs for the volume attachment resource.
-variable "num_iscsi_volumes_per_instance" {
-  default = "1"
-}
-
-variable "num_paravirtualized_volumes_per_instance" {
   default = "1"
 }
 
