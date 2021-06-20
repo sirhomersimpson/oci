@@ -2,7 +2,7 @@ resource "oci_core_instance" "test_instance" {
     count               = var.num_instances
     availability_domain = data.oci_identity_availability_domain.ad.name
     compartment_id      = var.compartment_ocid
-    display_name        = "Rik_TestInstance${count.index}"
+    display_name        = random_pet.server.id
     shape               = var.instance_shape
 
     create_vnic_details {
@@ -66,4 +66,7 @@ resource "oci_core_subnet" "test_subnet" {
     vcn_id              = oci_core_vcn.test_vcn.id
     route_table_id      = oci_core_vcn.test_vcn.default_route_table_id
     dhcp_options_id     = oci_core_vcn.test_vcn.default_dhcp_options_id
+}
+
+resource "random_pet" "server" {
 }
