@@ -35,3 +35,10 @@ vnic=`oci compute instance list-vnics --compartment-id ocid1.compartment.oc1..aa
 ```
 # get display name
  oci compute instance list -c $C | jq '.data[0]."display-name"'
+
+# Get cluster information
+```
+oci compute-management cluster-network list | jq .data[].id
+oci compute-management cluster-network list | jq .data[].\"display-name\"
+```
+
