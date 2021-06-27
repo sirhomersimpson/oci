@@ -1,7 +1,7 @@
 provider "oci" {
-  tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaabgbm264ykbrfrs2manqytigyh6wiwcg3s7wsgzaw7qmscquzr5qq"
-  user_ocid = "ocid1.user.oc1..aaaaaaaapwgd6gl3yjjjmidy32wsc4iapgg62q7c5fsg2ezd2vpt3aswwlga"
+  tenancy_ocid = "ocid1.tenancy.region1..aaaaaaaa5tiiq4wpo5ywqgwidmh4oz4ipiosyohh3jgvjjswbj4p7cjkkwla"
+  user_ocid = "ocid1.user.region1..aaaaaaaaeabbzuneg4xdtwxfc46ciisfubxx2llha6td3g6y6pe64krzbp2a"
   private_key_path = "/home/rkisnah/.oci/oci_api_key.pem"
-  fingerprint = "8f:0d:95:f2:f6:70:72:44:fa:29:b7:54:46:d9:d2:df"
-  region = "ap-osaka-1"
+  fingerprint = "41:a9:0a:55:2c:28:13:69:4f:e8:4b:c7:b5:5e:ec:14"
+  region = "r1"
 }
