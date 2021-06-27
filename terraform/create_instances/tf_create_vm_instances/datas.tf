@@ -6,3 +6,9 @@ data "oci_identity_availability_domain" "ad" {
 data "oci_core_instance" "test_instance" {
     instance_id = oci_core_instance.test_instance[0].id 
 }
+
+data "oci_core_instances" "test_instances" {
+    #Required
+    compartment_id = var.compartment_id
+
+}
