@@ -55,8 +55,6 @@ resource "oci_core_instance_configuration" "test_instance_configuration" {
         "extendedMetadata" = "extendedMetadata"
       }
 
-      ipxe_script = "ipxeScript"
-
       metadata = {
         ssh_authorized_keys = var.ssh_public_key
     }
@@ -64,8 +62,8 @@ resource "oci_core_instance_configuration" "test_instance_configuration" {
       shape = "BM.HPC2.36"
 
       source_details {
-        boot_volume_size_in_gbs = "55"
-        image_id                = "ocid1.image.oc1..aaaaaaaacx3y4fvrg2m3wibapxu5mgyp64l7nxqo2rhrejprvzfjbhdn747q"
+        boot_volume_size_in_gbs = "50"
+        image_id                = "ocid1.image.oc1..aaaaaaaazeefig7dqaoheiyoufmllolc3tuiv2c4xueecpr33dm3k4xjip3a"
         source_type             = "image"
       }
     }
