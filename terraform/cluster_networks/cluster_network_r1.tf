@@ -66,6 +66,12 @@ resource "oci_core_subnet" "test_subnet" {
   vcn_id            = oci_core_vcn.test_vcn.id
 }
 
+resource "oci_core_internet_gateway" "ig1" {
+  vcn_id         = oci_core_vcn.test_vcn.id
+  compartment_id = var.compartment_ocid
+  display_name   = "internet-gateway"
+}
+
 variable "InstanceImageOCID" {
   type = map(string)
 
@@ -96,7 +102,7 @@ resource "oci_core_instance_configuration" "test_instance_configuration" {
       compartment_id      = var.compartment_ocid
 
       create_vnic_details {
-        assign_public_ip       = "false"
+        assign_public_ip       = "true"
         display_name           = "backend-servers"
         hostname_label         = "hostnameLabel"
         nsg_ids                = [oci_core_network_security_group.test_network_security_group1.id]
