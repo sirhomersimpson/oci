@@ -48,4 +48,8 @@ oci compute-management cluster-network list | jq .data[].\"display-name\"
 oci os bucket list
 {
 }
+
+## --file is name of downloaded file
+oci os object get --bucket-name "canary" --name "hpc-canary-test-2.json" --file "rik.json"
+
 ```
