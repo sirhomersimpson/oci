@@ -42,3 +42,10 @@ oci compute-management cluster-network list | jq .data[].id
 oci compute-management cluster-network list | jq .data[].\"display-name\"
 ```
 
+# Object store
+
+```
+oci os bucket list
+{
+}
+```
